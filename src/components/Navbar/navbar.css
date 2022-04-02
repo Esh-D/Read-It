@@ -1,0 +1,68 @@
+.nbContainer{
+    height: 45px;
+    width: 100%;
+    background-color: #FFF; /**/
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.nbLeft{
+    flex: 2;
+}
+.logo{
+    font-size: 24px;
+    margin-left: 25px;
+    font-weight: bold;
+    color: #FF4500; /*Main Red colour of site*/
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.nbMidLeft{
+    flex: 2;
+}
+.nbMidRight{
+    flex: 6;
+}
+.searchBar{
+    height: 35px;
+    width: 100%;
+    background-color: #F6F7F8FF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.searchIcon{
+    font-size: 25px !important;
+    margin-left: 10px;
+    color: #839394FF; /* dark grey colour */
+}
+.searchBox {
+    border: none;
+    width: 90%;
+
+    background-color: #F6F7F8FF; 
+    color: #1C1C1CFF; /* very dark grey colour */
+    margin-left: 5px;
+}
+.searchBox:focus {
+    outline: none;
+}
+
+.nbRight{
+    flex: 3;
+    display: flex;
+}
+
+.nbButtons{
+    display: flex;
+    margin-left: 10%;
+}
+.nbBtnIcon{
+    font-size: 30px !important;
+    margin-left: 15px;
+    color: #1C1C1CFF;
+    cursor: pointer;
+}
