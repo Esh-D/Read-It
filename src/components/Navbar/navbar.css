@@ -1,7 +1,7 @@
 .nbContainer{
     height: 45px;
     width: 100%;
-    background-color: #FFF; /**/
+    background-color: white; /*white*/
     display: flex;
     align-items: center;
     position: sticky;
@@ -29,7 +29,9 @@
 .searchBar{
     height: 35px;
     width: 100%;
-    background-color: #F6F7F8FF;
+    background-color: #F6F7F8FF; /* light grey colour */
+    /*border-color: #839394FF;
+    border-width: 6px;*/
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -63,6 +65,6 @@
 .nbBtnIcon{
     font-size: 30px !important;
     margin-left: 15px;
-    color: #1C1C1CFF;
+    color: #1C1C1CFF; /* very dark grey colour */
     cursor: pointer;
 }

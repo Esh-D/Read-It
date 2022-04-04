@@ -1,0 +1,77 @@
+.post {
+    margin: 15px 20px 15px 20px; /* top, right, bottom, left*/
+}
+.postWrapper {
+    background-color: white;
+    display: flex;
+    border-radius: 5px;
+}
+.postLeft {
+    flex: 1;
+    background-color: #F6F7F8FF; /* light grey colour */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 10px;
+}
+.postLeft :hover {
+    color: grey;
+}
+.upIcon {
+    border-radius: 3px;
+    cursor: pointer;
+}
+.downIcon {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.postRight {
+    flex: 14;
+    margin: 10px 10px 5px 10px;
+}
+.postTitleContainer :hover {
+    color: lightgrey;
+}
+.postTop {
+    font-size: 11px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.postTitle {
+    font-size: 20px;
+    font-weight: 500; /* semi bold (I couldn't figure out what the keyword was so I just wrote 600) */
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.postBody {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.postBottom {
+    display: flex;
+    padding-top: 10px;
+}
+.actionButton {
+    font-size: 11px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    padding-right: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+div.postBottom :hover{
+    background-color: lightgrey; /* predefined light-grey colour */
+}
+.buttonText {
+    padding-left: 5px;
+}
+.postBodyText {
+    font-size: 14px;
+}
