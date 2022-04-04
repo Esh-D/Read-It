@@ -1,4 +1,6 @@
 import "./post.css"
+
+import {useState} from 'react';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined'; 
@@ -9,34 +11,36 @@ const Post = () => {
     // if preview is true, postBody text is shortened, if not, then its in full
     // ^will make that functionality later, just a reminder
     let preview = true;
-    let saved = false;
+    let [saved, setSaved] = useState(false);
     let title = "Arcane is awesome!";
     let body = "I just love Arcane. The characters, the plot, the art, everything about it is great. My favourite character is Vi.";
     let community = "Arcane";
     let user = "Eshika";
     let time = "5 hours";
     let comments = 6;
+    let [upvotes, setUpvotes] = useState(0);
+    let [downvotes, setDownvotes] = useState(0);
 
     return (
         <div className="post">
             <div className="postWrapper">
                 <div className="postLeft">
-                    <div className="upIcon">
+                    <div className="upIcon" onClick={() => {setUpvotes(++upvotes)}}>
                         <ArrowCircleUpIcon />
                     </div>
-                    57
-                    <div className="downIcon">
+                    {upvotes - downvotes}
+                    <div className="downIcon" onClick={() => {setDownvotes(++downvotes)}}>
                         <ArrowCircleDownIcon/>
                     </div>
                 </div>
                 <div className="postRight">
                     <div className="postTop">
-                        r/{community} - Posted by {user} {time} ago
+                        <span className="postCommunity">r/{community}</span> - Posted by u/{user} {time} ago
                     </div>
                     <div className="postTitleContainer">
-                        <div className="postTitle">
+                        <span className="postTitle" onClick={() => {console.log("Go to post page")}}>
                             {title}
-                        </div>
+                        </span>
                     </div>
                     <div className="postBody">
                         {preview && 
@@ -45,19 +49,28 @@ const Post = () => {
                         </div>}
                     </div>
                     <div className="postBottom">
-                        <div className="actionButton">
+                        <div className="postActionButton">
                             <ForumOutlinedIcon />
-                            <div className="buttonText">
+                            <span className="buttonText" onClick={() => {console.log("Go to post page (where comments are)")}}>
                                 {comments} Comments
-                            </div>
+                            </span>
                         </div>
-                        <div className="actionButton">
-                            {saved ? <BookmarkAddedOutlinedIcon /> :
-                            <BookmarkAddOutlinedIcon />}
-                            <div className="buttonText">
-                                Save
+                        
+                        {saved ? 
+                            <div className="postActionButton" onClick={() => {setSaved(!saved)}}>
+                                <BookmarkAddOutlinedIcon />
+                                <span className="buttonText">
+                                    Save
+                                </span>
                             </div>
-                        </div>
+                        :
+                            <div className="postActionButton" onClick={() => {setSaved(!saved)}}>
+                                <BookmarkAddedOutlinedIcon />
+                                <span className="buttonText">
+                                    Saved
+                                </span>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

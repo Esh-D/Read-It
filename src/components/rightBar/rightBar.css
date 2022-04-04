@@ -1,5 +1,4 @@
-.rightBarContainer{
-    background-color: green;
+.rightBarContainer {
     flex: 2;
     height: calc(100vh - 45px);
 }

@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="nbContainer">
             <div className="nbLeft">
-                <span className="logo"><CircleIcon/>ReadIt</span>
+                <span className="logo"><CircleIcon className="logoIcon"/><span className="logoText">readIt</span></span>
             </div>
             <div className="nbMidLeft">
                 <div className="nbComDropdown">

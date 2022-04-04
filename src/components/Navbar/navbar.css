@@ -11,15 +11,20 @@
     flex: 2;
 }
 .logo{
-    font-size: 24px;
+    font-size: 25px;
     margin-left: 25px;
     font-weight: bold;
     color: #FF4500; /*Main Red colour of site*/
     cursor: pointer;
+    display: flex;
     align-items: center;
-    justify-content: center;
 }
-
+.logoIcon {
+    font-size: 35px !important;
+}
+.logoText{
+    padding-left: 3px;
+}
 .nbMidLeft{
     flex: 2;
 }
@@ -35,6 +40,7 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
+    border: 0.5px solid #839394FF;
 }
 .searchIcon{
     font-size: 25px !important;
@@ -44,7 +50,6 @@
 .searchBox {
     border: none;
     width: 90%;
-
     background-color: #F6F7F8FF; 
     color: #1C1C1CFF; /* very dark grey colour */
     margin-left: 5px;

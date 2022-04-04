@@ -1,9 +1,11 @@
 import "./rightBar.css"
 
+import HomeWelcomeCard from "../homeWelcome/HomeWelcome";
+
 const RightBar = () => {
     return (
         <div className="rightBarContainer">
-            right bar
+            <HomeWelcomeCard />
         </div>
     )
 }
