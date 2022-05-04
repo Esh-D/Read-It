@@ -3,12 +3,15 @@ import AddIcon from '@mui/icons-material/Add';
 import PersonIcon from '@mui/icons-material/Person';
 import CircleIcon from '@mui/icons-material/Circle';
 import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    let navigate = useNavigate();
+
     return (
         <div className="nbContainer">
             <div className="nbLeft">
-                <span className="logo"><CircleIcon className="logoIcon"/><span className="logoText">readIt</span></span>
+                <span className="logo" onClick={() => {navigate("/")}}><CircleIcon className="logoIcon"/><span className="logoText">readIt</span></span>
             </div>
             <div className="nbMidLeft">
                 <div className="nbComDropdown">

@@ -1,0 +1,45 @@
+.communityCard {
+    margin: 15px 20px 15px 10px; /* top, right, bottom, left*/
+}
+.ccWrapper {
+    background-color: white;
+    border-radius: 3px;
+}
+.ccBanner {
+    height: 35px;
+    width: 100%;
+    background-color: #FF4500; /*Main Red colour of site*/
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+
+    /* banner text styling */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+.ccBody {
+    padding: 15px;
+}
+.ccText {
+    font-size: 14px;
+    padding: 5px 0px 20px 0px; /* top, right, bottom, left*/
+}
+.ccActionButtons {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.buttonJoin {
+    background-color: #0079d3; /* a nice blue */
+    color: white;
+    border-radius: 30px;
+    padding: 7px 30px 7px 30px; /* top, right, bottom, left*/
+    margin: 10px;
+    
+    cursor: pointer;
+}
+.buttonJoin:hover {
+    filter: brightness(110%);
+}

@@ -1,0 +1,11 @@
+.background{
+    height: 100%;
+    width: 100%;
+    background-color: #DAE0E6; /*Grey background of site*/
+}
+
+.comContainer{
+    display: flex;
+    margin-left: 17%;
+    margin-right: 17%;
+}
