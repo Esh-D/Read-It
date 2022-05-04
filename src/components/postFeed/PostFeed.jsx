@@ -10,6 +10,10 @@ const PostFeed = () => {
                 <Post />
                 <Post />
                 <Post />
+                <Post />
+                <Post />
+                <Post />
+                <Post />
             </div>
         </div>
     )

@@ -2,11 +2,10 @@
     height: 100%;
     width: 100%;
     background-color: #DAE0E6; /*Grey background of site*/
-    position: absolute;
 }
 
 .homeContainer{
     display: flex;
-    margin-left: 13%;
-    margin-right: 13%;
+    margin-left: 17%;
+    margin-right: 17%;
 }

@@ -6,6 +6,7 @@ import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined'; 
 import BookmarkAddOutlinedIcon from '@mui/icons-material/BookmarkAddOutlined';
 import BookmarkAddedOutlinedIcon from '@mui/icons-material/BookmarkAddedOutlined';
+import { useNavigate } from "react-router-dom";
 
 const Post = () => {
     // if preview is true, postBody text is shortened, if not, then its in full
@@ -18,27 +19,42 @@ const Post = () => {
     let user = "Eshika";
     let time = "5 hours";
     let comments = 6;
-    let [upvotes, setUpvotes] = useState(0);
-    let [downvotes, setDownvotes] = useState(0);
+    let [score, setScore] = useState(20);
+    let [up, setUp] = useState(false);
+    let [down, setDown] = useState(false);
+    
+    let navigate = useNavigate();
 
     return (
         <div className="post">
             <div className="postWrapper">
                 <div className="postLeft">
-                    <div className="upIcon" onClick={() => {setUpvotes(++upvotes)}}>
+                    <div className="upIcon" style={{color: up ? 'red': 'black'}} onClick={() => {
+                        if (!up) {
+                            setUp(true);
+                            setDown(false);
+                        }
+                        }}>
                         <ArrowCircleUpIcon />
                     </div>
-                    {upvotes - downvotes}
-                    <div className="downIcon" onClick={() => {setDownvotes(++downvotes)}}>
+                    { up && (score + 1) }
+                    { down && (score - 1) }
+                    { !down && !up && score }
+                    <div className="downIcon" style={{color: down ? 'red': 'black'}} onClick={() => {
+                        if (!down) {
+                            setUp(false);
+                            setDown(true);
+                        }
+                        }}>
                         <ArrowCircleDownIcon/>
                     </div>
                 </div>
                 <div className="postRight">
                     <div className="postTop">
-                        <span className="postCommunity">r/{community}</span> - Posted by u/{user} {time} ago
+                        <span className="postCommunity" onClick={() => {navigate("/community")}}> r/{community} </span> - Posted by u/{user} {time} ago
                     </div>
                     <div className="postTitleContainer">
-                        <span className="postTitle" onClick={() => {console.log("Go to post page")}}>
+                        <span className="postTitle" onClick={() => {navigate("/post")}}>
                             {title}
                         </span>
                     </div>
@@ -51,7 +67,7 @@ const Post = () => {
                     <div className="postBottom">
                         <div className="postActionButton">
                             <ForumOutlinedIcon />
-                            <span className="buttonText" onClick={() => {console.log("Go to post page (where comments are)")}}>
+                            <span className="buttonText" onClick={() => {navigate("/post")}}>
                                 {comments} Comments
                             </span>
                         </div>

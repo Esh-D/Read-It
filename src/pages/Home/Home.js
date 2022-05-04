@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from "../components/navbar/Navbar"
-import RightBar from "../components/rightBar/RightBar"
-import PostFeed from "../components/postFeed/PostFeed"
+import Navbar from "../../components/Navbar/Navbar"
+import RightBar from "../../components/rightBar/RightBar"
+import PostFeed from "../../components/postFeed/PostFeed"
 
 import "./home.css";
 
